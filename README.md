@@ -8,7 +8,7 @@ Right now this cheatsheet covers the steps to add existing code into a new GitHu
 
 Use case: you’re (\*ahem\*) just starting to learn about using Git to collaborate on software development and you plan to familiarise yourself with that by by putting your own code into GitHub.
 
-(This `README` will be updated as I learn more of the various Git commands and workflows.)
+(This cheatsheet will be updated as (if?) I learn more of the various Git commands and workflows.)
 
 For starters, you need to have Git installed on your computer. (Mine comes from [https://git-scm.com/](https://git-scm.com/))
 
@@ -153,7 +153,7 @@ The files in the local repository will now also be in the remote repository on G
 
 ## References
 
-The ‘Add existing code to a new GitHub repository’ part of this `README` is based on:
+The ‘Add existing code to a new GitHub repository’ part of this document is based on:
 
 - GitHub’s [Adding locally hosted code to GitHub docs](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git) (github.com)
 - Karl Broman’s [Start a new git repository guide](https://kbroman.org/github_tutorial/pages/init.html) (kbroman.org)
