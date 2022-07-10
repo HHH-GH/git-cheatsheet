@@ -8,25 +8,23 @@ Right now this cheatsheet covers the steps to add existing code into a new GitHu
 
 Use case: you’re (\*ahem\*) just starting to learn about using Git to collaborate on software development and you plan to familiarise yourself with that by by putting your own code into GitHub.
 
-(This cheatsheet will be updated as (if?) I learn more of the various Git commands and workflows.)
+(This post will be updated as [if?] I learn more of the various Git commands and workflows. There is also [a copy of this cheatsheet on my GitHub](https://github.com/HHH-GH/git-cheatsheet/), and I followed these steps to set that up.)
 
-For starters, you need to have Git installed on your computer. (Mine comes from [https://git-scm.com/](https://git-scm.com/))
-
-I’m using Git Bash as the terminal app on the Windows side of my computer, and I also use whichever terminal app it is that comes with [Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview). 
+I’m using Git Bash as the terminal app on the Windows side of my computer, and I also use whichever terminal app it is that comes with [Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview). My Git install was from [https://git-scm.com/](https://git-scm.com/).
 
 ## Add existing code to a new GitHub repository
 
 ### 1. Make a new repository on GitHub
 
-On your GitHub homepage, click into Repositories and then click the ‘New’ button.
-
-![Cropped screenshot that shows the Repositories tab and the New repository button.](./assets/GitHub-repositories-new_656x104.png)
-
-![Cropped screenshot of the Create a new repository page on GitHub.](./assets/GitHub-create-repository_720x288.png)
+On your GitHub homepage, click into Repositories and then click the ‘New’ button. (There’s also an option to make a new branch in the little dropdown that shows all the branches.)
 
 - Choose a name for your new repository and (optionally) add a description.
 - Choose a Public or Private repository.
 - Skip the step that adds a `README` file, a `.gitignore` file, and a `LICENSE` file.
+
+![Cropped screenshot that shows the Repositories tab and the New repository button.](./assets/GitHub-repositories-new_656x104.png)
+
+![Cropped screenshot of the Create a new repository page on GitHub.](./assets/GitHub-create-repository_720x288.png)
 
 On the next page you’ll see a page with information about your new repository. Keep this page open so you can copy-paste from it in step 4 of this process. You’ll see something like the screenshot here.
 
@@ -78,10 +76,10 @@ Type `q` to exit the list. (sometimes `:q`)
 
 #### 3c. Create your .gitignore, README.md, and LICENSE.md files, if needed
 
-The `.gitignore` file tells Git which files to exclude from source control. I’ve often kept old copies of code in a folder named `old`. Those old copies can be excluded from source control with a line like this in the `.gitignore` file.
+The `.gitignore` file tells Git which files to exclude from source control. I’ve often kept old copies of code in a folder named `old`. Those old copies can be excluded from source control with a line like this in the `.gitignore` file. (See the [Git SCM docs for more on gitignore](https://git-scm.com/docs/gitignore).)
 
 ```
-# Ignore anything in the 'old' directory, which were previous versions of files before source control
+# Ignore anything in the 'old' directory
 old/
 ```
 
@@ -109,7 +107,7 @@ The `-m` flag means ‘use the text inside the quotes as the commit message’. 
 
 On the GitHub website page from step 1 you’ll find the https address for the remote repository. We’re going to link our local repository to that remote repository.
 
-Copy the address of the remote repository and add it as the remote origin for the local repository with the following command. (We’re using this Git Cheatsheet repository for this example.)
+Copy the address of the remote repository and add it as the remote origin for the local repository with the following command. (We’re using my Git Cheatsheet repository for this example.)
 
 ```
 git remote add origin https://github.com/HHH-GH/git-cheatsheet.git
