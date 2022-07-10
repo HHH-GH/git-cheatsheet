@@ -151,6 +151,70 @@ The files in the local repository will now also be in the remote repository on G
 
 ---
 
+## Make a new branch to work with
+
+Instead of working directly on the `main` branch, copy the `main` branch to a new ‘feature’ branch and make changes to that new branch. If the changes work, merge the changes into the `main` branch and then delete the feature branch. If your changes to the feature branch break everything irreparably you can delete it and start fresh, instead of trying to rewind a whole lot of commits on your `main` branch.
+
+### 1. Use GitHub to make a new branch
+
+You can also do this on the command line. Using GitHub is easy mode.
+
+- Click any of the ‘New branch’ buttons in your GitHub
+- Give the branch a name that describes what it’s for e.g. `make-the-readme`
+- Choose the source of the new branch i.e. `main`
+
+![Screenshot: GitHub branches list](./assets/GitHub-branches-list-page_816x296..png)
+
+![Screenshot: Github create a branch dialogue](./assets/GitHub-create-branch-dialogue_462x304.png)
+
+### 2. Bring the new branch into your local repository
+
+#### 2a. Get updates from the remote repository
+
+```
+git fetch origin
+```
+
+The screenshot below shows the results of the `git branch -r` command before and after `git fetch`.
+
+![Screenshot: git fetch origin command](./assets/GitHub-create-branch-dialogue_462x304.png)
+
+#### 2b. Check that the new branch is available
+
+```
+git branch -r
+```
+
+The `git branch` command shows the local branches. Adding the `-r` flag shows the remote branches. At this point, if you run `git branch` you won’t see the new branch in your local repository.
+
+#### 2c. Make a local copy of the new branch
+
+```
+git checkout -b make-the-readme origin/make-the-readme
+```
+
+The screenshot below shows that we’re now working with a local copy of `make-the-readme`.
+
+![Screenshot: git checkout command](./assets/Git-local-branch-from-remote_548x104.png)
+
+Now if you run `git branch` you’ll see your local repository has a copy of that new branch for you to work with.
+
+Do your work and then …
+
+### 3. Send any updated files up to the remote repository
+
+Push updated files to the remote repository after you’ve added and committed them.
+
+```
+git push
+```
+
+Did it work? View the new branch on GitHub to see if your changes have been synced.
+
+![Screenshot: changes pushed to GitHub](./assets/GitHub-assets-folder-push-remote_824x344.png)
+
+---
+
 ## References
 
 The ‘Add existing code to a new GitHub repository’ part of this document is based on:
