@@ -12,6 +12,8 @@ Use case: you’re (\*ahem\*) just starting to learn about using Git to collabor
 
 I’m using Git Bash as the terminal app on the Windows side of my computer, and I also use whichever terminal app it is that comes with [Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview). My Git install was from [https://git-scm.com/](https://git-scm.com/).
 
+---
+
 ## Add existing code to a new GitHub repository
 
 ### 1. Make a new repository on GitHub
