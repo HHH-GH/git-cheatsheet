@@ -8,6 +8,10 @@ Right now this cheatsheet covers the steps to add existing code into a new GitHu
 
 Use case: you’re (\*ahem\*) just starting to learn about using Git to collaborate on software development and you plan to familiarise yourself with that by by putting your own code into GitHub.
 
+**Contents so far**  
+- [Add existing code to a new GitHub repository](#add-existing-code-to-a-new-github-repository)
+- [Make a new branch to work with](#make-a-new-branch-to-work-with)
+
 (This post will be updated as [if?] I learn more of the various Git commands and workflows. There is also [a copy of this cheatsheet on my GitHub](https://github.com/HHH-GH/git-cheatsheet/), and I followed these steps to set that up.)
 
 I’m using Git Bash as the terminal app on the Windows side of my computer, and I also use whichever terminal app it is that comes with [Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview). My Git install was from [https://git-scm.com/](https://git-scm.com/).
