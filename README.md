@@ -2,7 +2,7 @@
 
 Currently mostly about adding existing code into a GitHub repository to start using source control.
 
-July 6, 2022
+July 17, 2022
 
 Right now this cheatsheet covers the steps to do some extremely basic things with Git on the command line, using GitHub as the remote host. It’s overly detailed because I’m trying to learn the details.
 
@@ -12,7 +12,7 @@ Use case: you’re (\*ahem\*) just starting to learn about using Git to collabor
 - [Add existing code to a new GitHub repository](#add-existing-code-to-a-new-github-repository)
 - [Make a new branch to work with](#make-a-new-branch-to-work-with)
 
-(This post will be updated as [if?] I learn more of the various Git commands and workflows. There is also [a copy of this cheatsheet on my GitHub](https://github.com/HHH-GH/git-cheatsheet/), and I followed these steps to set that up.)
+(This cheatsheet will be updated as [if?] I learn more of the various Git commands and workflows. I’ve used these steps to set up this `README.md`.)
 
 I’m using Git Bash as the terminal app on the Windows side of my computer, and I also use whichever terminal app it is that comes with [Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview). My Git install was from [https://git-scm.com/](https://git-scm.com/).
 
