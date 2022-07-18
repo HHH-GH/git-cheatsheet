@@ -181,7 +181,7 @@ git fetch origin
 
 The screenshot below shows the results of the `git branch -r` command before and after `git fetch`.
 
-![Screenshot: git fetch origin command](./assets/GitHub-create-branch-dialogue_462x304.png)
+![Screenshot: git fetch origin command](./assets/Git--fetch--for-new-branch_470x192.png)
 
 #### 2b. Check that the new branch is available
 
