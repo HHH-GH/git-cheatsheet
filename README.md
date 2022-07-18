@@ -6,7 +6,7 @@ July 17, 2022
 
 Right now this cheatsheet covers the steps to do some extremely basic things with Git on the command line, using GitHub as the remote host. It’s overly detailed because I’m trying to learn the details.
 
-Use case: you’re (\*ahem\*) just starting to learn about using Git to collaborate on software development and you plan to familiarise yourself with that by by putting your own code into GitHub and messing about with it.
+Use case: you’re (\*ahem\*) just starting to learn about using Git to collaborate on software development and you plan to familiarise yourself with that by putting your own code into GitHub and messing about with it.
 
 **Contents so far**  
 - [Add existing code to a new GitHub repository](#add-existing-code-to-a-new-github-repository)
