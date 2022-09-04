@@ -2,7 +2,7 @@
 
 Currently mostly about adding existing code into a GitHub repository to start using source control.
 
-July 17, 2022
+September 4, 2022
 
 Right now this cheatsheet covers the steps to do some extremely basic things with Git on the command line, using GitHub as the remote host. It’s overly detailed because I’m trying to learn the details.
 
@@ -11,6 +11,7 @@ Use case: you’re (\*ahem\*) just starting to learn about using Git to collabor
 **Contents so far**  
 - [Add existing code to a new GitHub repository](#add-existing-code-to-a-new-github-repository)
 - [Make a new branch to work with](#make-a-new-branch-to-work-with)
+- [Merge your feature branch into main branch, delete the feature branch](#merge-your-feature-branch-into-your-main-branch,-and-delete-the-feature-branch-afterwards)
 
 (This cheatsheet will be updated as [if?] I learn more of the various Git commands and workflows. I’ve used these steps to set up this `README.md`.)
 
@@ -216,6 +217,104 @@ git push
 Did it work? View the new branch on GitHub to see if your changes have been synced.
 
 ![Screenshot: changes pushed to GitHub](./assets/GitHub-assets-folder-push-remote_824x344.png)
+
+###  4. Bonus: use the command line to make a local branch and send it to the remote repository
+
+(If you are not the owner of the remote repository you’ll need to be added as a contributor by the owner before you can do this.)
+
+In this example a branch named `readme-updates` is created using the `main` branch as a base, and then pushed to the remote repository.
+
+```
+git checkout -b readme-updates origin/main
+git push -u origin readme-updates
+```
+
+The -u flag is being used to add upstream tracking references.
+
+---
+
+## Merge your feature branch into your main branch, and delete the feature branch afterwards
+
+To bring changes from a feature branch into your main branch use the `git merge` command on the command line, or do a Pull Request on GitHub.
+
+### 1. Remind yourself of the branch names
+
+```
+git branch
+```
+
+![Screenshot: git branch command](./assets/Merge-preps-git-branch_576x64.png)
+
+### 2. Checkout the main branch, and make sure it is up to date
+
+`git fetch` and `git pull` are used to get the most up to date version into your local repository. 
+
+Checkout the branch that you will merge into. (This example will merge `make-the-readme` into `main`)
+
+```
+git checkout main
+```
+
+![Screenshot: git checkout command](./assets/Merge-checkout-main-for-merge_576x80.png)
+
+### 3. Merge it
+
+```
+git merge make-the-readme
+```
+
+![Screenshot: results of git merge on commandline](./assets/Merge-results_576x288.png)
+
+That was a merge where everything went smoothly. 
+
+### 4. Push the updated version of main up to the remote repository
+
+```
+git push
+```
+
+![Screenshot: git push after a merge](./assets/Merge-push_576x80.png)
+
+Did it work? View the updated branch on GitHub to see if your changes have been synced.
+
+### 5. Delete the feature branch
+
+The feature branch is no longer needed. Delete it from your local and remote repositories.
+
+#### 5a. Delete the feature branch from the local repository
+
+```
+git branch -d make-the-readme
+```
+
+#### 5b. Delete the feature branch from the remote repository
+
+```
+git push origin -d make-the-readme
+```
+
+![Screenshot: deleting an unneeded branch in git](./assets/Merge-delete-local-remote-branches_576x120.png)
+
+In the preceding command, `origin` is the name of the remote repository. Use the `git remote -v` command to confirm that if needed.
+
+![Screenshot: git remote -v command](./assets/Merge-remote-v_576x64.png)
+
+#### 5c. Update your lists of branches
+
+```
+git fetch --all --prune
+```
+
+#### 5d. Check the local and remote lists of branches
+
+```
+git branch
+git branch -r
+```
+
+![Screenshot: results of git fetch --all --prune after unneeded branches are deleted](./assets/Merge-prune-check-branches_576x168.png)
+
+The changes made on the feature branch have been merged into main, and the feature branch has been deleted. 
 
 ---
 
