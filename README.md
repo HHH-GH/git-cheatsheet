@@ -12,6 +12,7 @@ Use case: you’re (\*ahem\*) just starting to learn about using Git to collabor
 - [Add existing code to a new GitHub repository](#add-existing-code-to-a-new-github-repository)
 - [Make a new branch to work with](#make-a-new-branch-to-work-with)
 - [Merge your feature branch into main branch, delete the feature branch](#merge-your-feature-branch-into-your-main-branch-and-delete-the-feature-branch-afterwards)
+- [Amending a commit](#amending-a-commit)
 
 (This cheatsheet will be updated as [if?] I learn more of the various Git commands and workflows. I’ve used these steps to set up this `README.md`.)
 
@@ -315,6 +316,20 @@ git branch -r
 ![Screenshot: results of git fetch --all --prune after unneeded branches are deleted](./assets/Merge-prune-check-branches_576x168.png)
 
 The changes made on the feature branch have been merged into main, and the feature branch has been deleted. 
+
+## Amending a commit
+
+Use this if you forgot to include a file in a commit, or if you spotted a typo just after you made a commit. 
+
+```
+git add .	// After you've fixed the typo
+git commit --amend --no-edit
+```
+
+The --amend option adds the changes to the previous commit.  
+The --no-edit option prevents Git opening the previous commit message for edits.
+
+If you do this after pushing the commit to the remote repository you’ll probably have to fix conflicts because ‘the tip of your current branch is behind its remote counterpart’. And you’ll end up with an extra commit message anyway. Is this why the experts say ‘Don’t do this if you have already pushed your changes’? Maybe yes? So if you spot a typo and you’ve already pushed the commit, you might as well do a new commit with a commit message like `typo lol` instead of something like `Merge branch '42-wechat-posts-auto-generated-qr-code' of https://github.com/HHH-GH/bjh-ee-site-templates into 42-wechat-posts-auto-generated-qr-code`.
 
 ---
 
