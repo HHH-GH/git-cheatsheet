@@ -2,7 +2,7 @@
 
 Currently mostly about adding existing code into a GitHub repository to start using source control.
 
-September 4, 2022
+July 26, 2023
 
 Right now this cheatsheet covers the steps to do some extremely basic things with Git on the command line, using GitHub as the remote host. It’s overly detailed because I’m trying to learn the details.
 
