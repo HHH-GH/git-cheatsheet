@@ -329,7 +329,15 @@ git commit --amend --no-edit
 The `--amend` option adds the changes to the previous commit.  
 The `--no-edit` option prevents Git opening the previous commit message for edits.
 
-If you do this after pushing the commit to the remote repository you’ll probably have to fix conflicts because ‘the tip of your current branch is behind its remote counterpart’. And you’ll end up with an extra commit message anyway. Is this why the experts say ‘Don’t do this if you have already pushed your changes’? Maybe yes? So if you spot a typo and you’ve already pushed the commit, you might as well do a new commit with a commit message like `typo lol` instead of something like `Merge branch '42-wechat-posts-auto-generated-qr-code' of https://github.com/HHH-GH/bjh-ee-site-templates into 42-wechat-posts-auto-generated-qr-code`, which is the kind of thing that Git is going to suggest for the commit message.
+The Experts say ‘Don’t do this if you have already pushed your changes’.
+
+I agree, even though I am not an expert.
+
+Don’t bother doing this if you’ve already pushed the commit to the remote repository.
+
+If you do, you’ll probably have to fix conflicts because ‘the tip of your current branch is behind its remote counterpart’, and that means you’ll end up with an extra commit message anyway.
+
+So if you spot a typo and you’ve already pushed the commit, you might as well do a new commit with a commit message like `typo lol` instead of something like `Merge branch '42-wechat-posts-auto-generated-qr-code' of https://github.com/HHH-GH/bjh-ee-site-templates into 42-wechat-posts-auto-generated-qr-code`, which is the kind of thing that Git is going to suggest for the commit message after you 1) pull the remote repository, 2) fix the conflicts, and 3) merge them.
 
 ---
 
